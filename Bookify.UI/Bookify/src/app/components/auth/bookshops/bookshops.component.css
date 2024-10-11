@@ -1,0 +1,43 @@
+.tablecontainer{
+    width: 80%;
+    margin: auto;
+  }
+  
+  table{
+    width: 100%;
+  }
+  
+  .mat-form-field {
+    width: 20%;
+    font-size: 14px;
+  }
+  
+  td, th {
+    width: 25%;
+  }
+  
+  #crate_btn{
+    float: right;
+    position: relative;
+    right: 10%;
+    top: 2%;
+  }
+  
+  .action_btn{
+    margin: 25px 5px;
+    height: 30px;
+    width: 30px;
+  }
+  
+  mat-icon{
+    transform: scale(0.7);
+    position: relative;
+    bottom: 14px;
+  }
+  
+  .default_maticon{
+    bottom: 0;
+  }
+  
+  
+  

@@ -1,0 +1,22 @@
+.stockcontainer{
+    width: 100%;
+}
+
+.stockcontainer > button{
+    margin: 5px 10px;
+    height: 46px;
+    width: 46px;
+}
+
+mat-icon{
+    position: relative;
+    bottom: 5px;
+}
+
+mat-slider{
+    width: 100%;
+}
+
+.bookstock_input{
+    width: 70%;
+}

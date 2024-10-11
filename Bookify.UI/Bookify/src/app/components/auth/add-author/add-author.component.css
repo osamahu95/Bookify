@@ -1,0 +1,29 @@
+:host {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.container{
+    width: 100%;
+    padding: 10px;
+}
+
+form{
+    width: 50%;
+    margin: auto;
+}
+
+#name{
+    width: 100%;
+    margin: 0 4px;
+}
+
+#description{
+    width: 100%;
+    margin: 0 5px;
+}
+
+#submitbtn{
+    float: right;
+}

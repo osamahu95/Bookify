@@ -1,0 +1,26 @@
+<mat-drawer-container class="sidebarcontainer">
+    <mat-drawer style="width: 200px;" mode="side" opened="">
+        <mat-nav-list>
+            <mat-list-item>
+                <a [routerLink]="['books']">Books</a>
+            </mat-list-item>
+            <mat-list-item>
+                <a [routerLink]="['bookshops']">BookShops</a>
+            </mat-list-item>
+            <mat-list-item>
+                <a [routerLink]="['authors']">Authors</a>
+            </mat-list-item>
+            <mat-list-item>
+                <a [routerLink]="['categories']">Categories </a>
+            </mat-list-item>
+        </mat-nav-list>
+    </mat-drawer>
+    <mat-drawer-content>
+        <!-- Content for the parent component -->
+        <div class="parent_container" *ngIf="activeRoute.children.length === 0">
+        </div>
+
+        <!-- Content for the Child Components -->
+        <router-outlet></router-outlet>
+    </mat-drawer-content>
+</mat-drawer-container>

@@ -1,0 +1,178 @@
+<mat-stepper [linear]="true">
+    <!-- General User Information Form -->
+    <mat-step [stepControl]="generalFormGroup">
+        <form [formGroup]="generalFormGroup">
+            <ng-template matStepLabel>General Information</ng-template>
+            <!-- First Name -->
+            <mat-form-field id="firstname_input" appearance="fill">
+                <mat-label>Enter First Name</mat-label>
+                <input matInput placeholder="First Name" id="firstname" name="firstname" [(ngModel)]="user.firstName" formControlName="firstname" required>
+            </mat-form-field>
+            <!-- Last name -->
+            <mat-form-field id="lastname_input" appearance="fill">
+                <mat-label>Enter Last Name</mat-label>
+                <input matInput placeholder="Last Name" id="lastname" name="lastname" [(ngModel)]="user.lastName" formControlName="lastname">
+            </mat-form-field>
+            <br>
+            <!-- Age -->
+            <mat-form-field id="age_input" appearance="fill">
+                <mat-label>Enter your Age</mat-label>
+                <input type="number" matInput placeholder="Age" id="age" name="age" [(ngModel)]="user.age" formControlName="age">
+            </mat-form-field>
+            <br>
+            <!-- Email -->
+            <mat-form-field id="email_input" appearance="fill">
+                <mat-label>Enter your Email</mat-label>
+                <input type="email" matInput placeholder="Email Address" id="email" name="email" [(ngModel)]="user.email" formControlName="email">
+                <mat-error *ngIf="generalFormGroup.controls.email.invalid">{{GetEmailError()}}</mat-error>
+            </mat-form-field>
+            <br>
+            <!-- Password -->
+            <mat-form-field id="password_input" appearance="fill">
+                <mat-label>Enter Password</mat-label>
+                <input matInput placeholder="Password" [type]="hidePassword ? 'password': 'text'" id="password" name="password" 
+                    [(ngModel)]="user.password" formControlName="password">
+                <button mat-icon-button matSuffix (click)="hidePassword = !hidePassword" [attr.aria-label]="'Hide Password'" [attr.aria-pressed]="hidePassword">
+                    <mat-icon>{{hidePassword ? 'visibility_off' : 'visibility' }}</mat-icon>
+                </button>
+            </mat-form-field>
+            <!-- Confirm Password -->
+            <mat-form-field id="confirm_pass_input" appearance="fill">
+                <mat-label>Confirm Your Password</mat-label>
+                <input matInput placeholder="Confirm Password" [type]="hideConfirmPassword ? 'password': 'text'" formControlName="confirmpassword" 
+                    id="confirmpassword" name="confirmpassword" [(ngModel)]="user.confirmPassword">
+                <button mat-icon-button matSuffix (click)="hideConfirmPassword = !hideConfirmPassword" [attr.aria-label]="'Hide Password'" [attr.aria-pressed]="hideConfirmPassword">
+                    <mat-icon>{{hideConfirmPassword ? 'visibility_off' : 'visibility' }}</mat-icon>
+                </button>
+            </mat-form-field>
+            <div id="control_1">
+                <button mat-raised-button matStepperNext color="primary">Next</button>
+            </div>
+        </form>
+    </mat-step>
+
+    <!-- User Address Information -->
+    <mat-step [stepControl]="addressFormGroup">
+        <form [formGroup]="addressFormGroup">
+            <ng-template matStepLabel>Address Information</ng-template>
+            <!-- Address Line 1 -->
+            <mat-form-field id="address_line_1_input" appearance="fill">
+                <mat-label>Enter Address Line 1</mat-label>
+                <input matInput placeholder="Address Line 1" id="addrline1" name="addrline1" [(ngModel)]="user.addressLine1" formControlName="addressline1">
+            </mat-form-field>
+            <!-- Address Line 1 -->
+            <mat-form-field id="address_line_2_input" appearance="fill">
+                <mat-label>Enter Address Line 2</mat-label>
+                <input matInput placeholder="Address Line 2" id="addrline2" name="addrline2" [(ngModel)]="user.addressLine2" formControlName="addressline2">
+            </mat-form-field>
+            <!-- State -->
+            <mat-form-field id="state_input" appearance="fill">
+                <mat-label>Enter your State</mat-label>
+                <input matInput placeholder="Enter State" id="state" name="state" [(ngModel)]="user.state" formControlName="state">
+            </mat-form-field>
+            <!-- City -->
+            <mat-form-field id="city_input" appearance="fill">
+                <mat-label>Enter your City</mat-label>
+                <input matInput placeholder="Enter City" id="city" name="city" [(ngModel)]="user.city" formControlName="city">
+            </mat-form-field>
+            <!-- Country -->
+            <mat-form-field id="country_input" appearance="fill">
+                <mat-label>Enter your Country</mat-label>
+                <input matInput placeholder="Enter Country" id="country" name="country" [(ngModel)]="user.country" formControlName="country">
+            </mat-form-field>
+            <!-- Zip Code -->
+            <mat-form-field id="zipcode_input" appearance="fill">
+                <mat-label>Enter Zip Code</mat-label>
+                <input type="text" matInput placeholder="Zip Code" id="zipcode" name="zipcode" [(ngModel)]="user.zipCode" formControlName="zipcode">
+            </mat-form-field>
+            <div id="controls_2">
+                <button mat-raised-button matStepperPrevious color="accent" style="margin-right: 7px;">Back</button>
+                <button mat-raised-button matStepperNext color="primary" style="margin-left: 7px;">Next</button>
+            </div>
+        </form>
+    </mat-step>
+    
+    <!-- Credit Card Inforamtion -->
+    <mat-step [stepControl]="creditCardFormGroup">
+        <form [formGroup]="creditCardFormGroup">
+            <ng-template matStepLabel>Credit Card Information</ng-template>
+            <!-- Owner -->
+            <mat-form-field id="owner_input" appearance="fill">
+                <mat-label>Owner</mat-label>
+                <input matInput placeholder="Enter Owner Name" id="owner" name="owner" [(ngModel)]="user.cardOwner" formControlName="owner">
+            </mat-form-field>
+            <!-- credit card number -->
+            <mat-form-field id="ccn_input" appearance="fill">
+                <mat-label>Credit Card Number</mat-label>
+                <input matInput placeholder="Enter Credit Card Number" id="cardnum" name="cardnum" [(ngModel)]="user.creditCardNumber" formControlName="ccn">
+            </mat-form-field>
+            <!-- CVV -->
+            <mat-form-field id="cvv_input" appearance="fill">
+                <mat-label>Enter CVV</mat-label>
+                <input type="text" matInput placeholder="CVV Code" id="cvv" name="cvv" [(ngModel)]="user.cvv" formControlName="cvv">
+            </mat-form-field>
+            <!-- Expiry Date -->
+            <mat-form-field id="expiry_input" appearance="fill">
+                <mat-label>Enter Expiry</mat-label>
+                <input matInput [matDatepicker]="picker" id="expiredate" name="expiredate" placeholder="Select Expiration" formControlName="expiry">
+                <mat-hint>MM/YY</mat-hint>
+                <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                <mat-datepicker #picker startView="multi-year" (monthSelected)="setMonthAndYear($event, picker)" panelClass="expirationDatePicker"></mat-datepicker>
+            </mat-form-field>
+
+            <div id="controls_2">
+                <button mat-raised-button matStepperPrevious color="accent" style="margin-right: 7px;">Back</button>
+                <button mat-raised-button matStepperNext color="primary" (click)="SetDateToModel()" style="margin-left: 7px;">Next</button>
+            </div>
+        </form>
+    </mat-step>
+
+    <!-- Show all user Information -->
+    <mat-step [stepControl]="userInfoFormGroup">
+        <form style="width: 80%;" [formGroup]="userInfoFormGroup">
+            <ng-template matStepLabel>Your Information</ng-template>
+            <mat-card>
+                <mat-card-title>{{user.firstName}} {{user.lastName}}</mat-card-title>
+                <mat-card-subtitle>{{user.email}}</mat-card-subtitle>
+                <mat-card-subtitle *ngIf="user.age > 0">Age: {{user.age}}</mat-card-subtitle>
+                <mat-card-content>
+                    
+                    <mat-accordion>
+                        <!-- Address  -->
+                        <mat-expansion-panel>
+                            <mat-expansion-panel-header>
+                                <mat-panel-title>
+                                    <h2>Address Infomation</h2>
+                                </mat-panel-title>
+                            </mat-expansion-panel-header>
+                            <h3>Address Line 1: {{user.addressLine1}}</h3>
+                            <h3 *ngIf="user.addressLine2.length > 0">Address Line 2: {{user.addressLine2}}</h3>
+                            <h3>State: {{user.state}}</h3>
+                            <h3>City: {{user.city}}</h3>
+                            <h3>Country: {{user.country}}</h3>
+                            <h3>Zip Code: {{user.zipCode}}</h3>
+                        </mat-expansion-panel>
+                        <!-- Credit Card  -->
+                        <mat-expansion-panel>
+                            <mat-expansion-panel-header>
+                                <mat-panel-title>
+                                    <h2>Credit Card Infomation</h2>
+                                </mat-panel-title>
+                            </mat-expansion-panel-header>
+                            <h3>Card Owner: {{user.cardOwner}}</h3>
+                            <h3>Card Number: {{user.creditCardNumber}}</h3>
+                            <h3>CVV: {{user.cvv}}</h3>
+                            <h3>Expiration: {{user.expiration}}</h3>
+                        </mat-expansion-panel>
+                    </mat-accordion>
+
+                </mat-card-content>
+            </mat-card>
+            <br>
+            <div id="controls_2">
+                <button mat-raised-button matStepperPrevious color="accent" style="margin-right: 7px;">Back</button>
+                <button mat-raised-button (click)="Submit()" color="primary" style="margin-left: 7px;">Sign Up</button>
+            </div>
+        </form>
+    </mat-step>
+</mat-stepper>

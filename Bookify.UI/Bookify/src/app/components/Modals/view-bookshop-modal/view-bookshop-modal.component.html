@@ -1,0 +1,25 @@
+<h2 mat-dialog-title>{{bookShop.name}}</h2>
+<mat-dialog-content class="mat-typography">
+  
+  <div class="address_container">
+    <h2>Address</h2>
+    <p>{{bookShop.address}}</p>
+  </div>
+
+  <div class="description_container">
+    <h2>Description</h2>
+    <p *ngIf="bookShop.description.length > 0">{{bookShop.description}}</p>
+    <p *ngIf="bookShop.description.length == 0">No Description Available</p>
+  </div>
+
+  <div class="book_container">
+    <h2>Books</h2>
+    <mat-list *ngIf="books.length > 0" role="list">
+      <mat-list-item *ngFor="let book of books">{{book.name}}</mat-list-item>
+    </mat-list>
+    <p *ngIf="books.length == 0">No Books Available.</p>
+  </div>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+  <button mat-button [mat-dialog-close]="true" cdkFocusInitial>OK</button>
+</mat-dialog-actions>

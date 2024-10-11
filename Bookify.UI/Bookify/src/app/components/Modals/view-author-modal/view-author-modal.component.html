@@ -1,0 +1,11 @@
+<h2 mat-dialog-title>{{author.name}}</h2>
+<mat-dialog-content class="mat-typography">
+  <div class="description_container">
+    <h2>Description</h2>
+    <p *ngIf="author.description.length > 0">{{author.description}}</p>
+    <p *ngIf="author.description.length == 0">No Description Available.</p>
+  </div>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+  <button mat-button [mat-dialog-close]="true" cdkFocusInitial>OK</button>
+</mat-dialog-actions>

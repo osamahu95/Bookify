@@ -1,0 +1,14 @@
+<div class="container">
+    <form #addauthorform="ngForm" (submit)="AddAuthor(addauthorform)">
+        <mat-form-field id="name" appearance="fill">
+            <mat-label>Author Name</mat-label>
+            <input type="text" id="name" name="name" [(ngModel)]="author.name" matInput>
+            <mat-error *ngIf="authorName.invalid">{{getAuthorNameError()}}</mat-error>
+        </mat-form-field>
+        <mat-form-field id="description" appearance="fill">
+            <mat-label>Author Description</mat-label>
+            <textarea matInput id="description" name="description" [(ngModel)]="author.description" rows="10" cols="50"></textarea>
+        </mat-form-field>
+        <button id="submitbtn" mat-raised-button color="primary">Save</button>
+    </form>
+</div>

@@ -1,0 +1,8 @@
+.description_container{
+    width: 100%;
+}
+
+.description_container > p{
+    position: relative;
+    bottom: 15px;
+}

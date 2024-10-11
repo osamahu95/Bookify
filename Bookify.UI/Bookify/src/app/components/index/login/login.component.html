@@ -1,0 +1,17 @@
+<form class="loginform" #login="ngForm" (submit)="Login(login)">
+    <mat-form-field id="email_input" appearance="fill">
+        <mat-label>Enter your Email</mat-label>
+        <input matInput placeholder="example@someemail.com" id="email" name="email" [(ngModel)]="userLogin.email" [formControl]="email" required>
+        <mat-icon matSuffix>alternate_email</mat-icon>
+        <mat-error *ngIf="email.invalid">{{getEmailErrorMessage()}}</mat-error>
+    </mat-form-field>
+    <mat-form-field id="password_input" appearance="fill">
+        <mat-label>Enter your Password</mat-label>
+        <input matInput [type]="hidePassword? 'password': 'text'" id="password" name="password" [(ngModel)]="userLogin.password" required>
+        <button mat-icon-button matSuffix (click)="hidePassword = !hidePassword" [attr.aria-label]="'Hide Password'" [attr.aria-pressed]="hidePassword">
+            <mat-icon>{{hidePassword? 'visibility_off': 'visibility'}}</mat-icon>
+        </button>
+        <mat-error *ngIf="password.invalid">Password is Required</mat-error>
+    </mat-form-field>
+    <button mat-raised-button color="primary" type="submit">Sign In</button>
+</form>

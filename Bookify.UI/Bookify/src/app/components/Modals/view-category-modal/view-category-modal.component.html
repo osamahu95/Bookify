@@ -1,0 +1,24 @@
+<h2 mat-dialog-title>Category</h2>
+<mat-dialog-content class="mat-typography">
+  <h3>{{category.name}}</h3>
+
+  <h2>Description</h2>
+  <img class="category_img" *ngIf="category.id.toUpperCase() === '72AA4A56-DFE9-4997-8BF9-14E6B17EB9B3'" src="/assets/img/category_images/horror.jpg" width="100%">
+  <img class="category_img" *ngIf="category.id.toUpperCase() === '34A5A8B0-E76C-4A2C-89F5-386A9BB04B65'" src="/assets/img/category_images/bildungsroman.jpg" width="100%">
+  <img class="category_img" *ngIf="category.id.toUpperCase() === 'CAA1FB83-B6DC-4663-AC93-5BF1876BB343'" src="/assets/img/category_images/RealistLiterature.jpg" width="100%">
+  <img class="category_img" *ngIf="category.id.toUpperCase() === '2047A6B0-91F1-44A1-BAC6-5DBB1910A3C8'" src="/assets/img/category_images/Fantasy.jpg" width="100%">
+  <img class="category_img" *ngIf="category.id.toUpperCase() === '175949F9-1FBA-4E04-A189-6566582AC4AF'" src="/assets/img/category_images/LiteraryFiction.jpg" width="100%">
+  <img class="category_img" *ngIf="category.id.toUpperCase() === '205FF7CB-E591-4FB2-9EB1-7B0A82F9F911'" src="/assets/img/category_images/Thriller.jpg" width="100%">
+  <img class="category_img" *ngIf="category.id.toUpperCase() === '046D2218-E1C2-44EF-A08F-81937EFCECFA'" src="/assets/img/category_images/ScienceFiction.jpg" width="100%">
+  <img class="category_img" *ngIf="category.id.toUpperCase() === 'B5FADA00-83B2-4F2D-818D-8C97DC8E30FB'" src="/assets/img/category_images/Dystopian.png" width="100%">
+  <img class="category_img" *ngIf="category.id.toUpperCase() === '3B222D78-F57B-4EF7-A780-9B88218A571E'" src="/assets/img/category_images/Historical.jpg" width="100%">
+  <img class="category_img" *ngIf="category.id.toUpperCase() === '8CE7194B-7DA4-4D34-8362-9FAADF1FD308'" src="/assets/img/category_images/Western.jpg" width="100%">
+  <img class="category_img" *ngIf="category.id.toUpperCase() === '5CBAC9B5-1D4A-480D-8D6B-C0B7080DBF1F'" src="/assets/img/category_images/Romance.jpg" width="100%">
+  <img class="category_img" *ngIf="category.id.toUpperCase() === 'B69EDE09-6755-478D-9804-D367956D5590'" src="/assets/img/category_images/Mystery.jpg" width="100%">
+  <img class="category_img" *ngIf="category.id.toUpperCase() === '9036F8D3-5D40-4A8C-BA17-DB67499851BD'" src="/assets/img/category_images/MagicalRealism.jpg" width="100%">
+  <img class="category_img" *ngIf="category.id.toUpperCase() === 'B451C633-A08D-4970-9B17-F813E715EFFD'" src="/assets/img/category_images/SpeculativeFiction.jpg" width="100%">
+
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+  <button mat-button [mat-dialog-close]="true" cdkFocusInitial>OK</button>
+</mat-dialog-actions>

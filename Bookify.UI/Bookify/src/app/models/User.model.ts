@@ -1,0 +1,18 @@
+export interface User{
+    id: string,
+    firstname: string,
+    lastname: string,
+    age: number,
+    email: string,
+    password: string,
+    addressLine1: string,
+    addressLine2: string,
+    state: string,
+    city: string,
+    country: string,
+    zipcode: string,
+    cardOwner: string,
+    creditCardNumber: number,
+    cvv: number,
+    expiration: string,
+}

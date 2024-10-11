@@ -1,0 +1,64 @@
+form{
+    width: 50%;
+}
+
+#firstname_input, #lastname_input{
+    margin: 5px 10px 7px 10px; 
+    width: 40%;
+}
+
+#age_input{
+    margin: 0 10px 0 10px;
+    width: 40%;
+}
+
+#email_input{
+    margin: 0px 10px 10px 10px;
+    width: 83%;
+}
+
+#password_input, #confirm_pass_input{
+    margin: 0 10px 0 10px;
+    width: 40%;
+}
+
+#address_line_1_input, #address_line_2_input{
+    margin: 5px 10px 7px 10px; 
+    width: 100%;
+}
+
+#state_input, #city_input{
+    margin: 10px 10px;
+    width: 40%;
+}
+
+#country_input, #zipcode_input{
+    margin: 10px 10px;
+    width: 40%;
+}
+
+#control_1, #controls_2{
+    margin: 0 10px;
+}
+
+#owner_input, #ccn_input{
+    margin: 10px 10px;
+    width: 100%;
+}
+
+#cvv_input, #expiry_input{
+    margin: 10px 10px;
+    width: 40%;
+}
+
+mat-label{
+    font-weight: 500;
+}
+
+mat-panel-title > h2{
+    margin: 5px;
+}
+
+mat-error{
+    font-size: 12px;
+}

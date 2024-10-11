@@ -1,0 +1,39 @@
+:host {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.container{
+    width: 100%;
+    padding: 10px;
+}
+
+form{
+    width: 50%;
+    margin: auto;
+}
+
+#name, #isbn{
+    width: 42%;
+    margin: 0 4px;
+}
+
+#author_select{
+    width: 50%;
+    margin: 0 4px;
+}
+
+#description{
+    width: 85%;
+    margin: 0 5px;
+}
+
+#active{
+    width: 100%;
+}
+
+#submitbtn{
+    float: right;
+    margin-right: 90px;
+}

@@ -1,0 +1,62 @@
+.description_container{
+    background-color: #EDF9F3;
+    width: 100%;
+    padding: 5px;
+    color: black;
+    border-radius: 5px;
+}
+
+.description_container > h3{
+    color: green;
+    font-weight: bold;
+}
+
+.description_container > p{
+    position: relative;
+    bottom: 12px;
+    font-weight: bold;
+}
+
+.isbn_container{
+    padding: 3px;
+    margin-top: 5px;
+}
+
+.isbn_container > p{
+    position: relative;
+    bottom: 15px;
+}
+
+.author_container{
+    padding: 3px;
+    position: relative;
+    bottom: 20px;
+}
+
+.author_container > p{
+    position: relative;
+    bottom: 15px;
+}
+
+.categories_container{
+    padding: 3px;
+    position: relative;
+    bottom: 40px;
+}
+
+.categories_container > mat-list{
+    position: relative;
+    bottom: 20px;
+}
+
+.categories_container > mat-list > mat-list-item{
+    color: black;
+    font-weight: bold;
+    background-color: rgb(203, 207, 211);
+    border-bottom: 2px solid darkslategray;
+}
+
+.categories_container > p{
+    position: relative;
+    bottom: 15px;
+}

@@ -1,0 +1,31 @@
+<h2 mat-dialog-title>{{book.name}}</h2>
+<mat-dialog-content class="mat-typography">
+
+  <div class="description_container">
+    <h3><u>Description</u></h3>
+    <p *ngIf="book.description.length > 0">{{book.description}}</p>
+    <p *ngIf="book.description.length == 0">No Description Available</p>
+  </div>
+
+  <div class="isbn_container">
+    <h2><u>ISBN</u></h2>
+    <p>{{book.isbn}}</p>
+  </div>
+
+  <div class="author_container">
+    <h2><u>Author</u></h2>
+    <p *ngIf="author.id != '00000000-0000-0000-0000-000000000000'">{{author.name}}</p>
+    <p *ngIf="author.id == '00000000-0000-0000-0000-000000000000'">No Author Added.</p>
+  </div>
+
+  <div class="categories_container">
+    <h2><u>Categories</u></h2>
+    <mat-list *ngIf="categories.length > 0" role="list">
+      <mat-list-item role="listitem" *ngFor="let category of categories">{{category.name}}</mat-list-item>
+    </mat-list>
+    <p *ngIf="categories.length == 0">No Categories Added.</p>
+  </div>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+  <button mat-button [mat-dialog-close]="true" cdkFocusInitial color="warn">Close</button>
+</mat-dialog-actions>

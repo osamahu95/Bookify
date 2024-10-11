@@ -1,0 +1,33 @@
+.container{
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+}
+
+.tickimg{
+    position: relative;
+    left: 45%;
+    top: 15%;
+    width: 50px;
+    padding: 10px;
+    border: 2px solid greenyellow;
+    border-radius: 100%;
+}
+
+.thanks_heading, #login_btn{
+    position: absolute;
+    width: 96%;
+    top: 220px;
+    text-align: center;
+    margin: auto; 
+}
+
+#login_btn{
+    top: 280px;
+    width: 30%;
+    left: 33%;
+}
+
+.tickimg > img{
+    width: 40px;
+}

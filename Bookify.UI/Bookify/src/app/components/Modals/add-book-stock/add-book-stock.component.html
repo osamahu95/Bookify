@@ -1,0 +1,32 @@
+<h2 mat-dialog-title>Book Stock</h2>
+<mat-dialog-content class="mat-typography">
+    <h2>Available Stock: <span style="color: green;">{{stock.itemStock}}</span></h2>
+
+    <div class="stockcontainer">
+        <button (click)="OnChangeStock('reduce')" mat-fab color="warn">
+            <mat-icon>remove_circle_outline</mat-icon>
+        </button>
+        <mat-form-field class="bookstock_input" appearance="fill">
+            <mat-label>Enter Stock</mat-label>
+            <input type="number" [(ngModel)]="stock.itemStock" matInput placeholder="Ex. 5">
+        </mat-form-field>
+        <button (click)="OnChangeStock('add')" mat-fab color="primary">
+            <mat-icon>add_circle_outline</mat-icon>
+        </button>
+    </div>
+    <mat-slider
+    thumbLabel
+    [displayWith]="SliderFormatLabel"
+    [tickInterval]="100"
+    step="50"
+    min="0"
+    max="10000"
+    [color]="'primary'"
+    [value]="stock.itemStock"
+    (change)="OnsliderChange($event)"
+    ></mat-slider>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+  <button mat-button [mat-dialog-close]="true" cdkFocusInitial color="warn">Close</button>
+  <button mat-raised-button color="primary" [mat-dialog-close]="true" (click)="AddStock()">Ok</button>
+</mat-dialog-actions>

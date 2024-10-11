@@ -1,0 +1,14 @@
+<h2 mat-dialog-title>{{bookShop.name}}</h2>
+<mat-dialog-content class="mat-typography">
+    <h3>Select Bookshop</h3>
+    <mat-form-field appearance="fill">
+        <mat-label>Bookshop</mat-label>
+        <mat-select [(value)]="bookShop.id">
+          <mat-option *ngFor="let bookshop of bookShops" [value]="bookshop.id" (click)="OnBookShopSelect(bookshop.id)">{{bookshop.name}}</mat-option>
+        </mat-select>
+    </mat-form-field>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+  <button mat-button [mat-dialog-close]="true" cdkFocusInitial color="warn">Close</button>
+  <button mat-button color="primary" [mat-dialog-close]="true" (click)="SubmitBookToBookShop()">Ok</button>
+</mat-dialog-actions>

@@ -1,0 +1,11 @@
+.fillspan{
+    flex: auto;
+}
+
+.login-btn{
+    margin-right: 10px;
+}
+
+.register-btn{
+    margin-left: 10px;
+}

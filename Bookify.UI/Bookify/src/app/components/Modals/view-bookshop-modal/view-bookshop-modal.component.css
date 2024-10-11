@@ -1,0 +1,42 @@
+.address_container{
+    width: 100%;
+}
+
+.address_container > p{
+    position: relative;
+    bottom: 13px;
+}
+
+.description_container{
+    width: 100%;
+    position: relative;
+    bottom: 20px;
+}
+
+.description_container > p{
+    position: relative;
+    bottom: 13px;
+}
+
+.book_container{
+    width: 100%;
+    position: relative;
+    bottom: 30px;
+}
+
+.book_container > mat-list{
+    position: relative;
+    bottom: 20px;
+}
+
+.book_container > mat-list > mat-list-item{
+    color: black;
+    font-weight: bold;
+    background-color: rgb(203, 207, 211);
+    border-bottom: 2px solid darkslategray;
+}
+
+.book_container > p{
+    position: relative;
+    bottom: 20px;
+}

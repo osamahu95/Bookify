@@ -1,0 +1,25 @@
+<mat-drawer-container class="sidebarcontainer">
+    <mat-drawer style="width: 200px;" mode="side" opened="">
+        <mat-nav-list>
+            <mat-list-item>
+                <a [routerLink]="['']">Home</a>
+            </mat-list-item>
+            <mat-list-item>
+                <a [routerLink]="['aboutus']">About Us</a>
+            </mat-list-item>
+        </mat-nav-list>
+    </mat-drawer>
+    <mat-drawer-content>
+        <!-- Content for the parent component -->
+        <div class="parent_container" *ngIf="activatedRoute.children.length === 0">
+            <div class="title">
+                <h1>Welcome to Bookify</h1>
+                <h2>Explore Books from all over the world.</h2>
+                <a [routerLink]="['register']" mat-raised-button color="primary">Sign Up in Bookify</a>
+            </div>
+        </div>
+
+        <!-- Content for the Child Components -->
+        <router-outlet></router-outlet>
+    </mat-drawer-content>
+</mat-drawer-container>
